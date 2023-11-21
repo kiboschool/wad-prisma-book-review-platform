@@ -1,5 +1,5 @@
 const request = require('supertest');
-const {app, server, prisma} = require('./index');
+const {app, server} = require('./index');
 const w = require('jest-autograding-reporter').weight
 
 describe('Book Review API', () => {
@@ -46,7 +46,6 @@ describe('Book Review API', () => {
 
   afterAll( () => {
     server.close();
-    prisma.disconnect();
   })
 
 });
