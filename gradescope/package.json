@@ -8,7 +8,7 @@
     "seed": "node ./prisma/seed.js",
     "test:prepare": "npx prisma migrate reset --force && npx prisma migrate dev --name init  && npm run seed",
     "test": "npm run test:prepare && jest",
-    "grade": "jest --bail=0 --testResultsProcessor jest-autograding-reporter"
+    "grade": "npm run test:prepare && jest --bail=0 --testResultsProcessor jest-autograding-reporter"
   },
   "keywords": [],
   "author": "",
