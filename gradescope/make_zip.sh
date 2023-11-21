@@ -9,7 +9,7 @@ for test in $test_cases; do
   cp "${test}" "${test#*/}"
 done
 
-find . -type f -name '*.test.js' -exec zip gradescope.zip setup.sh run_autograder package.json jest.config.js {} +
+find . -type f -name '*.test.js' -exec zip gradescope.zip setup.sh run_autograder package.json .env jest.config.js {} +
 
 # Remove test files from gradescope after zip
 rm ./*.test.js
